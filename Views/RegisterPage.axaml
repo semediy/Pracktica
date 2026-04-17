@@ -1,0 +1,57 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Logistics.Views.RegisterPage">
+
+    <StackPanel Margin="30" Spacing="10">
+
+        <TextBlock Text="Реєстрація"
+                   FontSize="24"/>
+
+        <TextBox PlaceholderText="ПІБ"/>
+
+        <TextBox PlaceholderText="Пароль"/>
+
+        <RadioButton Name="Logist"
+                     Content="Логіст"
+                     Click="RoleChanged"/>
+
+        <RadioButton Name="Driver"
+                     Content="Водій"
+                     Click="RoleChanged"/>
+        
+        <RadioButton Name="User"
+                     Content="Користувач"
+                     Click="RoleChanged"/>
+        
+        <RadioButton Name="Admin"
+                     Content="Адмін"
+                     Click="RoleChanged"/>
+
+        <StackPanel Name="LogistPanel"
+                    IsVisible="False">
+
+            <CheckBox Content="Міжнародні перевезення"/>
+
+        </StackPanel>
+
+        <StackPanel Name="DriverPanel"
+                    IsVisible="False">
+
+            <CheckBox Content="B"/>
+            <CheckBox Content="C"/>
+            <CheckBox Content="C1"/>
+            <CheckBox Content="C"/>
+            <CheckBox Content="BE"/>
+            <CheckBox Content="CE"/>
+            
+
+        </StackPanel>
+
+        <Button Content="Зареєструватися"
+                Click="RegisterClick"/>
+        <CheckBox Content="Погоджуюся з умовами використання"
+                  Foreground="#64748b" FontSize="12"/>
+
+    </StackPanel>
+
+</UserControl>

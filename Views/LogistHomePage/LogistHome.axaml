@@ -1,0 +1,153 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Logistics.Views.LogistHomePage.LogistHome">
+        
+        <Grid>
+
+        <!-- ОСНОВНИЙ ЛЕЙАУТ -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ЛІВА ПАНЕЛЬ -->
+            <StackPanel Grid.Column="0"
+                        Spacing="10"
+                        Margin="10">
+
+                <Button Click="OpenVehicles">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="📌"/>
+                        <TextBlock Text="Перевезення"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Classes="green" Click="OpenDrivers">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="👨"/>
+                        <TextBlock Text="Водії"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="OpenRoutes">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="🗺️"/>
+                        <TextBlock Text="Маршрути"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Classes="green" Click="OpenTransport">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="🚚"/>
+                        <TextBlock Text="Авто"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="OpenCalendar">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="🗓️"/>
+                        <TextBlock Text="Календар"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Classes="green" Click="OpenSettings">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="⚙️"/>
+                        <TextBlock Text="Налаштування"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+            <!-- ПРАВА ЧАСТИНА -->
+            <ContentControl Grid.Column="1"
+                            x:Name="ContentArea"/>
+
+          <Grid Grid.Column="1"
+      Margin="0,80,40,40">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+
+    <!-- 🔹 КНОПКА 1 -->
+    <Button Grid.Row="0" Grid.Column="0"
+            Click="OpenContactDrivers"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10"
+            Background="#f59e0b"
+            CornerRadius="32"
+            Padding="20">
+
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="📞"
+                       FontSize="22"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Зв'язатись з водіями"
+                       TextAlignment="Center"/>
+        </StackPanel>
+    </Button>
+
+    <!-- 🔹 КНОПКА 2 -->
+    <Button Grid.Row="1" Grid.Column="0"
+            Click="OpenInternational"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="10"
+            Background="#22c55e"
+            CornerRadius="32"
+            Padding="20">
+
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="🌍"
+                       FontSize="22"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Міжнародні перевезення"
+                       TextAlignment="Center"/>
+        </StackPanel>
+    </Button>
+
+    <!-- 🔹 КНОПКА 3 -->
+    <Button Grid.Row="2" Grid.Column="0"
+            Click="OpenAdmin"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="10"
+            Background="#eab308"
+            CornerRadius="32"
+            Padding="20">
+
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="📅"
+                       FontSize="22"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Календар перевезень"
+                       TextAlignment="Center"/>
+        </StackPanel>
+    </Button>
+   
+
+</Grid>
+        </Grid>
+        <Image Source="avares://Logistics/Assets/cars.png" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Bottom" 
+               Margin="40,20,10,0" 
+               Width="220"
+               Opacity="0.95" 
+               IsHitTestVisible="False"/>
+        </Grid>
+    
+</UserControl>

@@ -43,15 +43,21 @@
             <CheckBox Content="C"/>
             <CheckBox Content="BE"/>
             <CheckBox Content="CE"/>
-            
-
-        </StackPanel>
+            </StackPanel>
+        
+        <StackPanel Name="AdminPanel"
+                    IsVisible="False">
+    </StackPanel>
+                    
+            <StackPanel Name="UserPanel"
+                        IsVisible="False">
+    </StackPanel>
 
         <Button Content="Зареєструватися"
                 Click="RegisterClick"/>
         <CheckBox Content="Погоджуюся з умовами використання"
                   Foreground="#64748b" FontSize="12"/>
 
-    </StackPanel>
+        </StackPanel>
 
 </UserControl>

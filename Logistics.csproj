@@ -29,10 +29,13 @@
         <DependentUpon>ContactDrivers.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Views\DriverHomePage\DriverHome.axaml.cs">
-        <DependentUpon>DriverHomePage.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Views\AdminHomePage\AdminHome.axaml" />
+      <AdditionalFiles Include="Views\DriverHomePage\AvailableRoutes.axaml" />
+      <AdditionalFiles Include="Views\DriverHomePage\ContactLogist.axaml" />
+      <AdditionalFiles Include="Views\DriverHomePage\DriverHome.axaml" />
     </ItemGroup>
     
    

@@ -1,7 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Logistics.Views.AdminHomePage;
 using Logistics.Views.DriverHomePage;
 using Logistics.Views.LogistHomePage;
+using Logistics.Views.UserHomePage;
 
 namespace Logistics.Views;
 
@@ -16,6 +18,8 @@ public partial class RegisterPage : UserControl
     {
         LogistPanel.IsVisible = Logist.IsChecked == true;
         DriverPanel.IsVisible = Driver.IsChecked == true;
+        AdminPanel.IsVisible = Admin.IsChecked == true;
+        UserPanel.IsVisible = User.IsChecked == true;
     }
 
     private void RegisterClick(object? sender, RoutedEventArgs e)
@@ -29,5 +33,17 @@ public partial class RegisterPage : UserControl
             
             MainWindow.MainFrameInstance.Content = new DriverHome();
         }
+        else if (Admin.IsChecked == true)
+        {
+            
+            MainWindow.MainFrameInstance.Content = new AdminHome();
+        }
+        else if (User.IsChecked == true)
+        {
+            
+            MainWindow.MainFrameInstance.Content = new UserHome();
+        }
+
+        
     }
 }

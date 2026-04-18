@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace Logistics.Views.UserHomePage;
 
-public partial class UserHome : Window
+public partial class UserHome : UserControl
 {
     public UserHome()
     {

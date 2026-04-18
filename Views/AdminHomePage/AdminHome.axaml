@@ -1,9 +1,79 @@
-<Window xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Logistics.Views.AdminHome"
-        Title="AdminHomePage">
-    Welcome to Avalonia!
-</Window>
+        x:Class="Logistics.Views.AdminHomePage.AdminHome">
+         <Grid>
+       
+             <ContentControl Grid.Column="1"
+                             x:Name="ContentArea"/>
+
+  
+             <Button Grid.Row="0" Grid.Column="1"
+                     Click="OpenContactLogist"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Bottom"
+                     Margin="10"
+                     Background="#f59e0b"
+                     CornerRadius="32"
+                     Padding="30">   
+                <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="📞"
+                                   FontSize="30 "
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="Контакти логістів"
+                                   TextAlignment="Center"/>
+                    
+                </StackPanel>
+        </Button>
+              
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ЛІВА ПАНЕЛЬ -->
+            <StackPanel Grid.Column="0"
+                        Spacing="10"
+                        Margin="10">
+                <Button Classes="green" Click="OpenChange">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="🛠️"/>
+                        <TextBlock Text="Редагування"/>
+                    </StackPanel>
+                </Button>
+
+
+                <Button Click="OpenLogist">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="👨‍💼"/>
+                        <TextBlock Text="Вхід від логіста"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Classes="green" Click="OpenDrivers">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="👨"/>
+                        <TextBlock Text="Вхід від водія"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="OpenUser">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="🙍"/>
+                        <TextBlock Text="Вхід від користувача"/>
+                    </StackPanel>
+                </Button>
+                
+                <Button Classes="green" Click="OpenSettings">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="⚙️"/>
+                        <TextBlock Text="Налаштування"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+         </Grid>
+           
+</UserControl>
